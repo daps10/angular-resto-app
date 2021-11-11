@@ -5,9 +5,25 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo "Hello, world!"
+        language: node_js
+        node_js: - "12"
+
+        addons:
+            apt:
+              sources:
+                - google-chrome
+              packages:
+                - google-chrome-stable
+
+            cache:
+                  directories:
+                      - ./node_modules
+
+                  install:
+                          - npm install
+
+                  script:
+                        - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
