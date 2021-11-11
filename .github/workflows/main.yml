@@ -6,24 +6,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+       - task: NodeTool@0
+            inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 
-        language: node_js
-        node_js: - "12"
-
-        addons:
-            apt:
-              sources:
-                - google-chrome
-              packages:
-                - google-chrome-stable
-
-            cache:
-                  directories:
-                      - ./node_modules
-
-                  install:
-                          - npm install
-
-                  script:
-                        - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'npm install and build'
