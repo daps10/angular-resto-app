@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 import { RestaurantsModule } from './restaurants/restaurants.module';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { RestaurantsModule } from './restaurants/restaurants.module';
     NgbModule,
     BrowserAnimationsModule,
     AuthModule,
-    RestaurantsModule
+    RestaurantsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
