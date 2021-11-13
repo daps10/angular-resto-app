@@ -15,7 +15,7 @@ import { RestaurantRoutingModule } from './restaurants-routing-module';
   ],
   imports: [
     CommonModule,
-    RestaurantRoutingModule,
+    RestaurantRoutingModule
   ]
 })
 export class RestaurantsModule { }
