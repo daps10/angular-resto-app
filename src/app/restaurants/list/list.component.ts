@@ -22,4 +22,18 @@ export class ListComponent implements OnInit {
     const navigationDetails: string[] = ['restaurant/add'];
     this.router.navigate(navigationDetails);
   }
+
+  // Delete restaurant
+  deleteResto(restoId:any){
+    // delete api call
+    this.resto.deleteResto(restoId).subscribe((result:any) => {
+      // remove from the list
+      this.collection = this.collection.filter((item: { id: any; }) => item.id !== restoId); 
+    });
+  }
+
+  // Update Restaurant
+  updateResto(){
+    console.log("update restautant");
+  }
 }
