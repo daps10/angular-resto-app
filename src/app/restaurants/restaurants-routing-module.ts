@@ -13,7 +13,7 @@ const routes: Routes = [
       {path:"list", component:ListComponent},
       {path:"details", component:DetailsComponent},
       {path:"add", component:AddComponent},
-      {path:"update", component:UpdateComponent},
+      {path:"update/:id", component:UpdateComponent},
       { path: '**',component:PageNotFoundComponent }
     ]
   }

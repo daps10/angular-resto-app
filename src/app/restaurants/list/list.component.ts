@@ -32,8 +32,4 @@ export class ListComponent implements OnInit {
     });
   }
 
-  // Update Restaurant
-  updateResto(){
-    console.log("update restautant");
-  }
 }
