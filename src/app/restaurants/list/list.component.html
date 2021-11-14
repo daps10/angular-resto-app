@@ -18,7 +18,8 @@
             <td>{{item.name}}</td>
             <td>{{item.email}}</td>
             <td>{{item.phone}}</td>
-            <td></td>
+            <td><i class="fa fa-pencil" style="color:blue;" (click)="updateResto()"></i> | <i (click)="deleteResto(item.id)" class="fa fa-trash" style="color:red;"></i>
+            </td>
         </tr>
     </tbody>
 </table>
