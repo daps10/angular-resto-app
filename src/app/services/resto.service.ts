@@ -11,4 +11,10 @@ export class RestoService {
   getList (){
     return this.http.get(this.url);
   }
+
+  // Save resto api
+  addResto(data: any){ 
+    return this.http.post(this.url,data);
+  }
+
 }
