@@ -5,7 +5,7 @@ import { UpdateComponent } from './update/update.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
 import { RestaurantRoutingModule } from './restaurants-routing-module';
-
+import { ReactiveFormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AddComponent,
@@ -15,7 +15,8 @@ import { RestaurantRoutingModule } from './restaurants-routing-module';
   ],
   imports: [
     CommonModule,
-    RestaurantRoutingModule
+    RestaurantRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class RestaurantsModule { }
